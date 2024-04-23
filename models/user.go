@@ -83,8 +83,5 @@ func GetUsers() ([]User, error) {
 	if err := DB.Order("created_at desc").Find(&users).Error; err != nil {
 		return users, err
 	}
-	for i := range users{
-		users[i].PrepareGive()
-	}
 	return users, nil
 }

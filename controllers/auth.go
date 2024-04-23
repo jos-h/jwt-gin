@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -59,7 +58,6 @@ func Login(ctx *gin.Context) {
 
 func CurrentUser(ctx *gin.Context) {
 	user_id, err := utils.ExtractTokenID(ctx)
-	log.Println(user_id)
 
 	if err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})

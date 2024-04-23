@@ -1,8 +1,6 @@
 package main
 
 import (
-	// "net/http"
-
 	"github.com/gin-gonic/gin"
 	"github.com/jwt-gin/controllers"
 	"github.com/jwt-gin/middlewares"
